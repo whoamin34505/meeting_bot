@@ -493,8 +493,7 @@ def report_handler(update: Update, context: CallbackContext):
     # Get the profile information of the reported user
     reported_user_data = get_user_data(reported_user_id)
 
-    # Notify the admin user (ID: 728362175) about the complaint
-    admin_user_id = 728362175
+    admin_user_id = (id)
     notification_text = f"Поступила жалоба на пользователя {reported_user_id}.\n\n" \
                         f"Имя: {reported_user_data['name']}\n" \
                         f"Возраст: {reported_user_data['age']}\n" \
@@ -629,7 +628,7 @@ def delete_all_likes(update, context):
     conn.commit()
     conn.close()
 
-ADMIN_USER_ID = 728362175
+ADMIN_USER_ID = (id)
 
 def send_message_to_all(update: Update, context: CallbackContext) -> None:
     # Check if the user who triggered the command is the admin
